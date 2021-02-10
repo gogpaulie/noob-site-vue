@@ -5,20 +5,22 @@
     <HeroVideo id="home" />
     <Work id="work" />
     <Contact id="contact" />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import NavbarMobileDrawer from "./components/NavbarMobileDrawer";
-import HeroVideo from "./components/HeroVideo";
-import Work from "./components/Work";
-import Contact from "./components/Contact";
+import Navbar from './components/Navbar';
+import NavbarMobileDrawer from './components/NavbarMobileDrawer';
+import HeroVideo from './components/HeroVideo';
+import Work from './components/Work';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 export default {
-  name: "App",
+  name: 'App',
   data: () => {
     return {
-      showNavBar: false
+      showNavBar: false,
     };
   },
   components: {
@@ -26,18 +28,19 @@ export default {
     NavbarMobileDrawer,
     HeroVideo,
     Work,
-    Contact
+    Contact,
+    Footer,
   },
   methods: {
     showNav() {
       this.showNavBar = !this.showNavBar;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-@import "./styles/_variables.scss";
+@import './styles/_variables.scss';
 *,
 *::after,
 *::before {
