@@ -2,7 +2,7 @@
   <section class="hero-video">
     <div class="bg-video">
       <video class="bg-video__content" autoPlay muted loop>
-        <source src="../assets/video2.mp4" type="video/mp4" />
+        <source src="../assets/HeroVideo.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="hero-video__title container">
@@ -26,17 +26,17 @@
 </template>
 
 <script>
-import ShowMoreBtn from "./ShowMoreBtn";
+import ShowMoreBtn from './ShowMoreBtn';
 export default {
-  name: "HeroVideo",
+  name: 'HeroVideo',
   components: {
-    ShowMoreBtn
-  }
+    ShowMoreBtn,
+  },
 };
 </script>
 
 <style lang="scss">
-@import "../styles/_variables.scss";
+@import '../styles/_variables.scss';
 .bg-video {
   position: absolute;
   top: 0;
