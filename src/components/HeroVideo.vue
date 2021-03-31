@@ -83,7 +83,7 @@ export default {
     & h1 {
       text-align: center;
       color: white;
-      margin: 2rem 0;
+      /* margin: 2rem 0; */
       font-size: 4rem;
       @media (max-width: $ig-med-screen) {
         font-size: 3rem;

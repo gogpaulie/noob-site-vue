@@ -1,44 +1,46 @@
 <template>
-  <section class="work container">
-    <h2>My Services</h2>
-    <div class="work__card">
-      <div class="work__card--video">
-        <video src="../assets/video2.mp4" controls></video>
+  <section class="work">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="work__card">
+        <div class="work__card--video">
+          <video src="../assets/video2.mp4" controls></video>
+        </div>
+        <div class="work__card--info">
+          <h3>Editing</h3>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              cumque?
+            </li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
+              perferendis doloribus est?
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="work__card--info">
-        <h3>Editing</h3>
-        <ul>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            cumque?
-          </li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur.</li>
-          <li>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
-            perferendis doloribus est?
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="work__card">
-      <div class="work__card--info">
-        <h3>Voice Acting</h3>
-        <ul>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            cumque?
-          </li>
-          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-          <li>Lorem ipsum dolor sit amet consectetur.</li>
-          <li>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
-            perferendis doloribus est?
-          </li>
-        </ul>
-      </div>
-      <div class="work__card--video">
-        <video src="../assets/video2.mp4" controls></video>
+      <div class="work__card">
+        <div class="work__card--info">
+          <h3>Voice Acting</h3>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              cumque?
+            </li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
+              perferendis doloribus est?
+            </li>
+          </ul>
+        </div>
+        <div class="work__card--video">
+          <video src="../assets/video2.mp4" controls></video>
+        </div>
       </div>
     </div>
   </section>
@@ -46,19 +48,28 @@
 
 <script>
 export default {
-  name: "Work"
+  name: 'Work',
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/_variables.scss";
+@import '../styles/_variables.scss';
 .work {
-  color: black;
+  padding: 15rem 0;
+  background: linear-gradient(
+    105.91deg,
+    #ccebff 0.29%,
+    #97bcd4 11.4%,
+    #738fa1 30%,
+    #4e616e 53.24%,
+    #2a343b 85.39%
+  );
+  background-blend-mode: multiply;
+  color: white;
 
   & h2 {
     text-align: center;
     font-size: 4rem;
-    margin: 15rem 0;
   }
 
   &__card {

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="nav__logo">
         <a href="#home">
-          <img src="../assets/logo.png" alt="logo" />
+          <img src="../assets/noob-logo.png" alt="logo" />
         </a>
       </div>
       <div
@@ -27,21 +27,21 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   components: {},
   data: () => {
     return {
       isScrollActive: false,
-      mobileView: false
+      mobileView: false,
     };
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("resize", this.handleView);
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleView);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-    window.addEventListener("resize", this.handleView);
+    window.removeEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleView);
   },
   methods: {
     handleScroll() {
@@ -59,13 +59,13 @@ export default {
       // }
       this.mobileView = window.innerWidth <= 990;
       console.log(this.mobileView);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/_variables.scss";
+@import '../styles/_variables.scss';
 .nav {
   margin: 0 auto;
   padding: 3rem 0;
@@ -90,8 +90,8 @@ export default {
   }
   &__logo img {
     margin-left: 2rem;
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     &:hover {
       filter: brightness(110%);
     }
