@@ -4,37 +4,47 @@
       <h2>My Services</h2>
       <div class="work__card">
         <div class="work__card--video">
-          <video src="../assets/video2.mp4" controls></video>
+          <youtube
+            :video-id="videoId"
+            ref="youtube"
+            @playing="playing"
+            fitParent="true"
+          ></youtube>
         </div>
         <div class="work__card--info">
-          <h3>Editing</h3>
+          <h3>Video Production</h3>
           <ul>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-              cumque?
+              VOD splicing
             </li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Channel trailers</li>
+            <li>Commercials</li>
             <li>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
-              perferendis doloribus est?
+              Clip compilations
+            </li>
+            <li>
+              Product review videos
+            </li>
+            <li>
+              Contact me to discuss exactly what you need (no charge)
             </li>
           </ul>
         </div>
       </div>
       <div class="work__card">
         <div class="work__card--info">
-          <h3>Voice Acting</h3>
+          <h3>Voice Acting (coming soon)</h3>
           <ul>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-              cumque?
+              Cartoons/Animation
             </li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Video Games</li>
+            <li>Stream alerts</li>
             <li>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi
-              perferendis doloribus est?
+              Narration (watch my guides on YouTube for examples)
+            </li>
+            <li>
+              Contact me to discuss exactly what you need (no charge)
             </li>
           </ul>
         </div>
@@ -49,6 +59,24 @@
 <script>
 export default {
   name: 'Work',
+  data() {
+    return {
+      videoId: '5tQ5KRpWKHQ',
+    };
+  },
+  methods: {
+    playVideo() {
+      this.player.playVideo();
+    },
+    playing() {
+      console.log('we are watching!!!');
+    },
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player;
+    },
+  },
 };
 </script>
 
@@ -58,9 +86,9 @@ export default {
   padding: 15rem 0;
   background: linear-gradient(
     105.91deg,
-    #ccebff 0.29%,
-    #97bcd4 11.4%,
-    #738fa1 30%,
+    #b3e1ff 0.29%,
+    #85a5ba 11.4%,
+    #617887 30%,
     #4e616e 53.24%,
     #2a343b 85.39%
   );
@@ -105,6 +133,7 @@ export default {
       }
       & ul {
         list-style: circle;
+        padding: 0 4rem;
       }
 
       & ul li {

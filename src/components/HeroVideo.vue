@@ -6,11 +6,9 @@
       </video>
     </div>
     <div class="hero-video__title container">
-      <h1>Perpetual Noob Video Productions</h1>
+      <h1>Perpetual Noob</h1>
       <p>
-        Perpetual Noob Video Productions is a small, locally operated and owned
-        company that takes care of all aspects of video production for local
-        entrepreneurs and small businesses.
+        Video Producer, Voice Actor, Live Broadcaster, Guide Creator
       </p>
     </div>
     <div class="hero-video__cta">
@@ -83,8 +81,9 @@ export default {
     & h1 {
       text-align: center;
       color: white;
-      /* margin: 2rem 0; */
-      font-size: 4rem;
+      margin: 3rem 0;
+      font-size: 5rem;
+
       @media (max-width: $ig-med-screen) {
         font-size: 3rem;
       }
@@ -94,7 +93,7 @@ export default {
     }
     & p {
       max-width: 900px;
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-align: center;
       @media (max-width: $ig-med-screen) {
         font-size: 1.75rem;
@@ -108,7 +107,7 @@ export default {
 .cta {
   width: 250px;
   padding: 1rem 4rem;
-  margin: 2rem;
+  margin: 5rem 2rem;
   font-family: inherit;
   color: white;
   background-color: transparent;
