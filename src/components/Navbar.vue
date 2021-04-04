@@ -18,7 +18,7 @@
           <a href="#home" class="current">Home</a>
         </li>
         <li class="nav__linkList--link"><a href="#work">Sevices</a></li>
-        <li class="nav__linkList--link"><a href="#!">About</a></li>
+        <li class="nav__linkList--link"><a href="#about">About</a></li>
         <li class="nav__linkList--link"><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -68,7 +68,7 @@ export default {
 @import '../styles/_variables.scss';
 .nav {
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 2rem 0;
   max-width: 1200px;
   align-items: center;
   position: fixed;
@@ -129,7 +129,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.9);
   max-width: 100%;
   max-width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
   @media (max-width: $ig-small-screen) {
     padding: 0;
   }

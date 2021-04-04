@@ -9,6 +9,7 @@
             ref="youtube"
             @playing="playing"
             fitParent="true"
+            resize="true"
           ></youtube>
         </div>
         <div class="work__card--info">
@@ -84,7 +85,7 @@ export default {
 @import '../styles/_variables.scss';
 .work {
   padding: 15rem 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     105.91deg,
     #b3e1ff 0.29%,
     #85a5ba 11.4%,
@@ -92,7 +93,7 @@ export default {
     #4e616e 53.24%,
     #2a343b 85.39%
   );
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; */
   color: white;
 
   & h2 {
@@ -120,6 +121,9 @@ export default {
       & video {
         width: 100%;
         height: 100%;
+        /* @media (max-width: $ig-xsmall-screen) {
+          width: 300px;
+        } */
       }
     }
 
@@ -128,8 +132,10 @@ export default {
       padding: 4rem;
 
       & h3 {
+        text-align: center;
         font-size: 3rem;
         margin-bottom: 2rem;
+        line-height: 120%;
       }
       & ul {
         list-style: circle;

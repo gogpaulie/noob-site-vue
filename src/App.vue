@@ -3,7 +3,11 @@
     <NavbarMobileDrawer :class="{ open: showNavBar }" />
     <Navbar v-on:show-nav="showNav" />
     <HeroVideo id="home" />
-    <Work id="work" />
+    <div class="background-container">
+      <Work id="work" />
+      <div class="divider"></div>
+      <About id="about" />
+    </div>
     <Contact id="contact" />
     <Footer />
   </div>
@@ -14,6 +18,7 @@ import Navbar from './components/Navbar';
 import NavbarMobileDrawer from './components/NavbarMobileDrawer';
 import HeroVideo from './components/HeroVideo';
 import Work from './components/Work';
+import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 export default {
@@ -28,6 +33,7 @@ export default {
     NavbarMobileDrawer,
     HeroVideo,
     Work,
+    About,
     Contact,
     Footer,
   },
@@ -92,6 +98,25 @@ body {
   @media (max-width: $ig-small-screen) {
     padding: 2rem;
   }
+}
+
+.background-container {
+  background: linear-gradient(
+    105.91deg,
+    #b3e1ff 0.29%,
+    #85a5ba 11.4%,
+    #617887 30%,
+    #4e616e 53.24%,
+    #2a343b 85.39%
+  );
+  background-blend-mode: multiply;
+}
+
+.divider {
+  height: 1px;
+  background-color: white;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .footer {

@@ -54,7 +54,7 @@ export default {
 .hero-video {
   // background-color: rgba($color: #17077769, $alpha: 0.6);
   background-color: rgba($color: #000000, $alpha: 0.6);
-  height: 65vh;
+  height: 75vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -108,6 +108,7 @@ export default {
   width: 250px;
   padding: 1rem 4rem;
   margin: 5rem 2rem;
+  border-radius: 150px;
   font-family: inherit;
   color: white;
   background-color: transparent;
