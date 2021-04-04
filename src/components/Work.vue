@@ -8,8 +8,7 @@
             :video-id="videoId"
             ref="youtube"
             @playing="playing"
-            fitParent="true"
-            resize="true"
+            fit-parent="true"
           ></youtube>
         </div>
         <div class="work__card--info">

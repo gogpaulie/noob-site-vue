@@ -59,6 +59,7 @@ html {
   // Defines what 1rem is...
   font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
+  overflow-x: hidden;
   //   @include respond(tab-land) {
   //     font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
   //   }
@@ -74,7 +75,7 @@ html {
 body {
   box-sizing: border-box;
   font-family: $font-primary;
-
+  overflow-x: hidden;
   // @include respond(tab-port) {
   //   padding: 0;
   // }

@@ -1,6 +1,6 @@
 <template>
   <nav class="nav" v-bind:class="{ active: this.isScrollActive }">
-    <div class="container">
+    <div class="nav-container">
       <div class="nav__logo">
         <a href="#home">
           <img src="../assets/noob-logo.png" alt="logo" />
@@ -36,12 +36,12 @@ export default {
     };
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleView);
+    window.addEventListener('scroll', this.handleScroll());
+    window.addEventListener('resize', this.handleView());
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleView);
+    window.removeEventListener('scroll', this.handleScroll());
+    window.addEventListener('resize', this.handleView());
   },
   methods: {
     handleScroll() {
@@ -70,6 +70,7 @@ export default {
   margin: 0 auto;
   padding: 2rem 0;
   max-width: 1200px;
+
   align-items: center;
   position: fixed;
   background-color: transparent;
@@ -81,7 +82,7 @@ export default {
   @media (max-width: $ig-small-screen) {
     padding: 1rem 0;
   }
-  & .container {
+  & .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,7 +130,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.9);
   max-width: 100%;
   max-width: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0;
   @media (max-width: $ig-small-screen) {
     padding: 0;
   }
