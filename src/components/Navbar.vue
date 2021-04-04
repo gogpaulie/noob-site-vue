@@ -68,7 +68,6 @@ export default {
 @import '../styles/_variables.scss';
 .nav {
   margin: 0 auto;
-  padding: 2rem 0;
   max-width: 1200px;
 
   align-items: center;
@@ -130,7 +129,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.9);
   max-width: 100%;
   max-width: 100%;
-  padding: 2rem 0;
+
   @media (max-width: $ig-small-screen) {
     padding: 0;
   }

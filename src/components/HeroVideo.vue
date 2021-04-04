@@ -12,12 +12,9 @@
       </p>
     </div>
     <div class="hero-video__cta">
-      <button class="cta cta__primary">
-        <a href="#contact">request quote</a>
-      </button>
-      <button class="cta cta__secondary" href="#services">
-        <a href="#work">See my work</a>
-      </button>
+      <a class="cta cta__primary" href="#contact">request quote</a>
+
+      <a class="cta cta__secondary" href="#work">See my work</a>
     </div>
     <ShowMoreBtn />
   </section>
@@ -103,7 +100,11 @@ export default {
       }
     }
   }
+  &__cta {
+    margin-top: 5rem;
+  }
 }
+
 .cta {
   width: 250px;
   padding: 1rem 4rem;
@@ -117,6 +118,7 @@ export default {
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 
   @media (max-width: $ig-small-screen) {
     display: flex;
@@ -125,11 +127,6 @@ export default {
     padding: 0.75rem 2rem;
     font-size: 1.5rem;
     width: 180px;
-  }
-
-  & a {
-    text-decoration: none;
-    color: inherit;
   }
 
   &:hover {
