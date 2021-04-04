@@ -36,12 +36,12 @@ export default {
     };
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll());
+    window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleView());
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll());
-    window.addEventListener('resize', this.handleView());
+    window.removeEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleView);
   },
   methods: {
     handleScroll() {
