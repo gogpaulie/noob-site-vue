@@ -37,7 +37,7 @@ export default {
   },
   created() {
     window.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleView());
+    window.addEventListener('resize', this.handleView);
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);

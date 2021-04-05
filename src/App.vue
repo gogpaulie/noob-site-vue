@@ -60,16 +60,6 @@ html {
   font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
   overflow-x: hidden;
-  //   @include respond(tab-land) {
-  //     font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
-  //   }
-
-  //   @include respond(tab-port) {
-  //     font-size: 50%; // 1rem = 8px; 8px/16px = 50%
-  //   }
-  //   @include respond(big-desktop) {
-  //     font-size: 75%; //1rem = 12px; 12px/16px = 75%
-  //   }
 }
 
 body {
@@ -113,11 +103,31 @@ body {
   background-blend-mode: multiply;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 9rem;
+  text-decoration: underline;
+}
+
 .divider {
   height: 1px;
   background-color: white;
   width: 500px;
   margin: 0 auto;
+}
+.divider-title {
+  height: 1px;
+  background-color: white;
+  width: 300px;
+
+  margin: 0 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
