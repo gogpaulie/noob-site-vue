@@ -17,7 +17,7 @@
         <li class="nav__linkList--link">
           <a href="#home" class="current">Home</a>
         </li>
-        <li class="nav__linkList--link"><a href="#work">Sevices</a></li>
+        <li class="nav__linkList--link"><a href="#work">Services</a></li>
         <li class="nav__linkList--link"><a href="#about">About</a></li>
         <li class="nav__linkList--link"><a href="#contact">Contact</a></li>
       </ul>
