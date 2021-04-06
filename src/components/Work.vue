@@ -120,7 +120,7 @@ export default {
   max-width: 225px;
   background-color: rgba($color: #000000, $alpha: 0.3);
   border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 2rem;
   box-shadow: 0 10px 10px 2px rgba($color: #000000, $alpha: 0.2);
   transition: all 0.2s;
   @media (max-width: $ig-med-screen) {
