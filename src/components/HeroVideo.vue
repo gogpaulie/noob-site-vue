@@ -115,6 +115,7 @@ export default {
   background-color: transparent;
   border: 2px solid white;
   font-size: 2rem;
+
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   cursor: pointer;
@@ -122,6 +123,7 @@ export default {
 
   @media (max-width: $ig-small-screen) {
     display: flex;
+    margin: 1rem 0;
   }
   @media (max-width: $ig-xsmall-screen) {
     padding: 0.75rem 2rem;

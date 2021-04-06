@@ -11,7 +11,8 @@
         v-if="mobileView"
         @click="$emit('show-nav')"
       >
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" v-show="!showNavBar"></i>
+        <i class="fas fa-times" v-show="showNavBar"></i>
       </div>
       <ul class="nav__linkList" v-if="!mobileView">
         <li class="nav__linkList--link">
@@ -29,6 +30,7 @@
 export default {
   name: 'Navbar',
   components: {},
+  props: ['showNavBar'],
   data: () => {
     return {
       isScrollActive: false,
@@ -36,6 +38,7 @@ export default {
     };
   },
   created() {
+    this.handleView();
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleView);
   },
@@ -52,11 +55,6 @@ export default {
       }
     },
     handleView() {
-      // if (window.innerWidth <= 990) {
-      //   this.mobileView = true;
-      // } else {
-      //   this.mobileView = false;
-      // }
       this.mobileView = window.innerWidth <= 990;
       console.log(this.mobileView);
     },
@@ -108,12 +106,14 @@ export default {
     font-size: 2rem;
     &--link a {
       color: white;
+      margin: 0 1rem;
       text-decoration: none;
       padding: 7px 15px;
       transition: all 0.3s ease-in-out;
+      border-bottom: 1px solid transparent;
 
       &:hover {
-        color: #c0392b;
+        border-color: white;
       }
     }
   }
@@ -141,6 +141,9 @@ export default {
 
 .nav.active a {
   color: black;
+  &:hover {
+    border-color: black;
+  }
 }
 
 .nav.active .nav__mobile-icon {

@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <h1 class="form-container__title">Contact Me</h1>
+    <h2 class="section-title">CONTACT ME</h2>
     <p class="form-container__subtitle">
       Do you want to collaborate? Message me below and I'll get back to you
       ASAP!
@@ -49,53 +49,53 @@
 </template>
 
 <script>
-import emailjs from "emailjs-com";
+import emailjs from 'emailjs-com';
 
 export default {
   methods: {
-    sendEmail: e => {
+    sendEmail: (e) => {
       emailjs
         .sendForm(
-          "YOUR_SERVICE_ID",
-          "YOUR_TEMPLATE_ID",
+          'YOUR_SERVICE_ID',
+          'YOUR_TEMPLATE_ID',
           e.target,
-          "YOUR_USER_ID"
+          'YOUR_USER_ID'
         )
         .then(
-          result => {
-            console.log("SUCCESS!", result.status, result.text);
+          (result) => {
+            console.log('SUCCESS!', result.status, result.text);
           },
-          error => {
-            console.log("FAILED...", error);
+          (error) => {
+            console.log('FAILED...', error);
           }
         );
     },
     showLabel(e) {
-      const name = document.getElementById("name");
-      const email = document.getElementById("email");
-      const message = document.getElementById("message");
-      if (e.target.name === "user_name") {
-        name.classList.add("focus");
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      if (e.target.name === 'user_name') {
+        name.classList.add('focus');
       }
-      if (e.target.name === "user_email") {
-        email.classList.add("focus");
+      if (e.target.name === 'user_email') {
+        email.classList.add('focus');
       }
-      if (e.target.name === "message") {
-        message.classList.add("focus");
+      if (e.target.name === 'message') {
+        message.classList.add('focus');
       }
     },
     hideLabel() {
-      const labels = document.querySelectorAll("label");
-      labels.forEach(label => {
-        label.classList.remove("focus");
+      const labels = document.querySelectorAll('label');
+      labels.forEach((label) => {
+        label.classList.remove('focus');
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/_variables.scss";
+@import '../styles/_variables.scss';
 .form-container {
   display: flex;
   flex-direction: column;
@@ -103,7 +103,7 @@ export default {
   align-items: center;
   background-color: #222;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-  padding: 2rem;
+  padding: 6rem;
 
   &__title {
     padding-top: 5rem;
@@ -129,7 +129,7 @@ export default {
   flex-direction: column;
   width: 600px;
 
-  @media (max-width: $ig-med-screen) {
+  @media (max-width: $ig-small-screen) {
     width: 400px;
   }
   @media (max-width: $ig-xsmall-screen) {
@@ -183,17 +183,20 @@ export default {
     }
   }
   &__btn {
-    background-color: $color-primary;
-    border: none;
-    border-radius: 3px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 150px;
     color: #fff;
+    font-family: inherit;
     font-size: 3em;
     padding: 10px 50px;
     text-transform: uppercase;
+    transition: all 0.2s;
+    cursor: pointer;
 
     &:hover {
-      filter: brightness(110%);
-      cursor: pointer;
+      background-color: white;
+      color: #222;
     }
   }
   &__alert {

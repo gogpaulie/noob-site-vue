@@ -2,33 +2,48 @@
   <div id="nav-mobile" class="drawer">
     <ul class="drawer__list">
       <li class="drawer__list--link">
-        <a href="#home" class="current">Home</a>
+        <a href="#home" class="current" @click="$emit('show-nav')">Home</a>
       </li>
-      <li class="drawer__list--link"><a href="#about">About</a></li>
-      <li class="drawer__list--link"><a href="#work">Sevices</a></li>
-      <li class="drawer__list--link"><a href="#contact">Contact</a></li>
+      <li class="drawer__list--link" @click="$emit('show-nav')">
+        <a href="#about">About</a>
+      </li>
+      <li class="drawer__list--link" @click="$emit('show-nav')">
+        <a href="#work">Sevices</a>
+      </li>
+      <li class="drawer__list--link" @click="$emit('show-nav')">
+        <a href="#contact">Contact</a>
+      </li>
     </ul>
     <div class="drawer__social-media">
-      <a href="#!"><i class="fab fa-twitter"></i></a>
-      <a href="#!"><i class="fab fa-twitch"></i></a>
-      <a href="#!"><i class="fab fa-youtube"></i></a>
+      <a href="https://twitter.com/perpetualnoob3" target="_blank"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a href="https://www.twitch.tv/perpetual_noob" target="_blank"
+        ><i class="fab fa-twitch"></i
+      ></a>
+      <a href="https://www.youtube.com/user/PerpetualNoob3" target="_blank"
+        ><i class="fab fa-youtube"></i
+      ></a>
+      <a href="https://www.patreon.com/perpetualnoob3" target="_blank"
+        ><i class="fab fa-patreon"></i
+      ></a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "NavbarMobileDrawer"
+  name: 'NavbarMobileDrawer',
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/_variables.scss";
+@import '../styles/_variables.scss';
 .drawer {
   position: fixed;
-  background-color: $color-primary;
+  background-color: #333;
   height: 100%;
-  width: 200px;
+  width: 220px;
   z-index: 100;
   display: flex;
   flex-direction: column;

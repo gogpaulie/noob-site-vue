@@ -23,6 +23,12 @@
             capabilities impressive. I will bring everything I am capable of to
             your project.
           </p>
+          <div class="flex">
+            <div class="divider-title no-left-margin"></div>
+            <h3 class="social-title">Check out more of my content</h3>
+            <div class="divider-title"></div>
+          </div>
+
           <div class="flex-container__right--links">
             <a
               href="https://www.youtube.com/user/PerpetualNoob3"
@@ -54,21 +60,9 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/_variables.scss';
 .about {
-  /* background: linear-gradient(
-    105.91deg,
-    #b3e1ff 0.29%,
-    #85a5ba 11.4%,
-    #617887 30%,
-    #4e616e 53.24%,
-    #2a343b 85.39%
-  );
-  background-blend-mode: multiply; */
   padding: 15rem 0;
-
-  & h2 {
-    text-align: center;
-    margin-bottom: 9rem;
-    font-size: 4rem;
+  @media (max-width: $ig-small-screen) {
+    padding: 6rem 0;
   }
 }
 
@@ -92,13 +86,19 @@ export default {
   }
   &__right {
     padding: 5rem;
+    max-width: 800px;
+    @media (max-width: $ig-small-screen) {
+      padding: 1rem;
+      width: 500px;
+    }
     @media (max-width: $ig-xsmall-screen) {
-      padding: 2rem;
+      padding: 1rem;
+      width: 300px;
     }
     & p {
       font-size: 2.2rem;
       line-height: 150%;
-      margin-bottom: 6rem;
+      margin-bottom: 3rem;
       @media (max-width: $ig-small-screen) {
         font-size: 1.75rem;
       }
@@ -107,10 +107,27 @@ export default {
       }
     }
     &--links {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
       & a {
         margin-right: 2rem;
+        transition: all 0.2s;
+        &:hover {
+          filter: brightness(80%);
+        }
       }
     }
+  }
+}
+.social-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  min-width: 150px;
+  line-height: 100%;
+  @media (max-width: $ig-xsmall-screen) {
+    font-size: 1.5rem;
   }
 }
 </style>

@@ -45,17 +45,20 @@
         <div class="feature">
           <img src="../assets/gamepad.svg" alt="video splicing icon" />
           <h4>Animation/Video Games</h4>
-          <p>Get your streams cut down to the content you want.</p>
+          <p>Characters of all flavors.</p>
         </div>
         <div class="feature">
           <img src="../assets/bell.svg" alt="video splicing icon" />
           <h4>Stream Alerts</h4>
-          <p>Introduce new users to your channel.</p>
+          <p>
+            Character voices for custom, original announcements for new follows,
+            subs, raids, etc.
+          </p>
         </div>
         <div class="feature">
           <img src="../assets/book-reader.svg" alt="video splicing icon" />
           <h4>Narration</h4>
-          <p>Satisfy your sponsors and keep the offers coming.</p>
+          <p>Natural voice for long form reads, ASMR, guides, etc.</p>
         </div>
       </div>
       <div class="work__card">
@@ -108,6 +111,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3rem 0;
   }
 }
 
@@ -153,16 +157,11 @@ export default {
 }
 .work {
   padding: 15rem 0;
-  /* background: linear-gradient(
-    105.91deg,
-    #b3e1ff 0.29%,
-    #85a5ba 11.4%,
-    #617887 30%,
-    #4e616e 53.24%,
-    #2a343b 85.39%
-  );
-  background-blend-mode: multiply; */
   color: white;
+
+  @media (max-width: $ig-small-screen) {
+    padding: 5rem 0;
+  }
 
   &__card {
     display: flex;
@@ -172,6 +171,7 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 3rem 0;
     }
 
     &--video {
@@ -223,5 +223,8 @@ export default {
   line-height: 110%;
   font-size: 3rem;
   text-align: center;
+  @media (max-width: $ig-small-screen) {
+    font-size: 2.5rem;
+  }
 }
 </style>

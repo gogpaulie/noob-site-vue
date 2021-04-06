@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <NavbarMobileDrawer :class="{ open: showNavBar }" />
-    <Navbar v-on:show-nav="showNav" />
+    <NavbarMobileDrawer :class="{ open: showNavBar }" v-on:show-nav="showNav" />
+    <Navbar v-on:show-nav="showNav" :showNavBar="showNavBar" />
     <HeroVideo id="home" />
     <div class="background-container">
       <Work id="work" />
@@ -85,7 +85,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  // padding: 5rem;
+
   @media (max-width: $ig-small-screen) {
     padding: 2rem;
   }
@@ -108,6 +108,10 @@ body {
   font-size: 4rem;
   margin-bottom: 9rem;
   text-decoration: underline;
+  @media (max-width: $ig-small-screen) {
+    margin-bottom: 5rem;
+    font-size: 3rem;
+  }
 }
 
 .divider {
@@ -120,8 +124,10 @@ body {
   height: 1px;
   background-color: white;
   width: 300px;
-
   margin: 0 2rem;
+  &.no-left-margin {
+    margin-left: 0;
+  }
 }
 
 .flex {
