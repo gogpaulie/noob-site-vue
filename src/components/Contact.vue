@@ -43,7 +43,7 @@
           required
         ></textarea>
       </div>
-      <vue-recaptcha sitekey="6LfSSKAaAAAAAF4LpLONWZYzyP-UE-1NreDz7iW2">
+      <vue-recaptcha sitekey="6LdQWKAaAAAAAB0ExpyM3B64F9ggZnXRtaOvG7UV">
         <button class="contact-form__btn" id="sendBtn" type="submit">
           send
         </button>
