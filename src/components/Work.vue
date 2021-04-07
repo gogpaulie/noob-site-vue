@@ -34,6 +34,7 @@
             :fit-parent="true"
             :resize="true"
           ></youtube>
+          <!-- <video src="https://www.youtube.com/watch?v=5tQ5KRpWKHQ"></video> -->
         </div>
       </div>
       <div class="flex">
@@ -117,7 +118,7 @@ export default {
 
 .feature {
   text-align: center;
-  max-width: 225px;
+  width: 225px;
   background-color: rgba($color: #000000, $alpha: 0.3);
   border-radius: 10px;
   padding: 2rem;
@@ -125,6 +126,9 @@ export default {
   transition: all 0.2s;
   @media (max-width: $ig-med-screen) {
     margin-bottom: 2rem;
+  }
+  @media (max-width: $ig-small-screen) {
+    padding: 1rem;
   }
 
   &:hover {
@@ -141,6 +145,10 @@ export default {
     margin-bottom: 3rem;
     filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(266deg)
       brightness(108%) contrast(101%);
+    @media (max-width: $ig-small-screen) {
+      height: 50px;
+      margin-bottom: 1.5rem;
+    }
   }
 
   & h4 {
@@ -148,11 +156,19 @@ export default {
     font-weight: bold;
     margin-bottom: 3rem;
     line-height: 120%;
+    @media (max-width: $ig-small-screen) {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
   & p {
     font-size: 1.75rem;
     line-height: 140%;
+    @media (max-width: $ig-small-screen) {
+      font-size: 1.25rem;
+      line-height: 120%;
+    }
   }
 }
 .work {

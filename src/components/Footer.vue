@@ -1,8 +1,6 @@
 <template>
   <footer class="footer">
-    <p>
-      &copy; Perpetual Noob Productions | Polihronakis Design {{ currentYear }}
-    </p>
+    <p>&copy; Perpetual Noob | Polihronakis Design {{ currentYear }}</p>
   </footer>
 </template>
 
