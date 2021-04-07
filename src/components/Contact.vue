@@ -55,7 +55,6 @@
       <button class="contact-form__btn" id="sendBtn" type="submit">
         send
       </button>
-
       <!-- <input type="submit" value="Send" /> -->
     </form>
   </div>
@@ -79,17 +78,26 @@ export default {
         .then(
           (result) => {
             console.log('SUCCESS!', result.status, result.text);
+            Vue.notify({
+              type: 'success',
+              title: 'Message Sent!',
+              text: 'Talk to you soon!',
+            });
           },
           (error) => {
             console.log('FAILED...', error);
+            Vue.notify({
+              type: 'danger',
+              title: 'Please check ReCaptcha',
+            });
           }
         );
       e.target.reset();
-      Vue.notify({
-        type: 'success',
-        title: 'Message Sent!',
-        text: 'Talk to you soon!',
-      });
+      // Vue.notify({
+      //   type: 'success',
+      //   title: 'Message Sent!',
+      //   text: 'Talk to you soon!',
+      // });
     },
     showLabel(e) {
       const name = document.getElementById('name');
@@ -214,6 +222,7 @@ export default {
     text-transform: uppercase;
     transition: all 0.2s;
     cursor: pointer;
+    width: 100%;
 
     &:hover {
       background-color: white;
@@ -239,5 +248,6 @@ textarea {
 
 .g-recaptcha {
   margin: 0 auto 2rem auto;
+  /* width: 100%; */
 }
 </style>
