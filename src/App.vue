@@ -10,6 +10,7 @@
     </div>
     <Contact id="contact" />
     <Footer />
+    <notifications position="bottom center" />
   </div>
 </template>
 
