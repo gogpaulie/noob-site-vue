@@ -50,10 +50,8 @@
         class="g-recaptcha"
         sitekey="6LdQWKAaAAAAAB0ExpyM3B64F9ggZnXRtaOvG7UV"
         type="checkbox"
-        @change="this.recaptchaChecked = true"
       >
       </vue-recaptcha>
-
       <button class="contact-form__btn" id="sendBtn" type="submit">
         send
       </button>
@@ -68,42 +66,30 @@ import Vue from 'vue';
 import emailjs from 'emailjs-com';
 import VueRecaptcha from 'vue-recaptcha';
 export default {
-  data() {
-    return {
-      recaptchaChecked: false,
-    };
-  },
   components: { VueRecaptcha },
   methods: {
     sendEmail: (e) => {
-      if (this.recaptchaChecked) {
-        emailjs
-          .sendForm(
-            'service_tev9jzv',
-            'template_4kl84vq',
-            e.target,
-            'user_BaAAqPGltN6DwLfEHQAP1'
-          )
-          .then(
-            (result) => {
-              console.log('SUCCESS!', result.status, result.text);
-            },
-            (error) => {
-              console.log('FAILED...', error);
-            }
-          );
-        e.target.reset();
-        Vue.notify({
-          type: 'success',
-          title: 'Message Sent!',
-          text: 'Talk to you soon!',
-        });
-      } else {
-        Vue.notify({
-          type: 'danger',
-          title: 'Please check reCaptcha',
-        });
-      }
+      emailjs
+        .sendForm(
+          'service_tev9jzv',
+          'template_4kl84vq',
+          e.target,
+          'user_BaAAqPGltN6DwLfEHQAP1'
+        )
+        .then(
+          (result) => {
+            console.log('SUCCESS!', result.status, result.text);
+          },
+          (error) => {
+            console.log('FAILED...', error);
+          }
+        );
+      e.target.reset();
+      Vue.notify({
+        type: 'success',
+        title: 'Message Sent!',
+        text: 'Talk to you soon!',
+      });
     },
     showLabel(e) {
       const name = document.getElementById('name');
