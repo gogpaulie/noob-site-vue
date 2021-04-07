@@ -83,16 +83,17 @@ export default {
               title: 'Message Sent!',
               text: 'Talk to you soon!',
             });
+            e.target.reset();
           },
           (error) => {
             console.log('FAILED...', error);
             Vue.notify({
-              type: 'danger',
+              type: 'error',
               title: 'Please check ReCaptcha',
             });
           }
         );
-      e.target.reset();
+
       // Vue.notify({
       //   type: 'success',
       //   title: 'Message Sent!',
