@@ -43,11 +43,15 @@
           required
         ></textarea>
       </div>
-      <vue-recaptcha sitekey="6LdQWKAaAAAAAB0ExpyM3B64F9ggZnXRtaOvG7UV">
-        <button class="contact-form__btn" id="sendBtn" type="submit">
-          send
-        </button>
+      <vue-recaptcha
+        class="g-recaptcha"
+        sitekey="6LdQWKAaAAAAAB0ExpyM3B64F9ggZnXRtaOvG7UV"
+        type="checkbox"
+      >
       </vue-recaptcha>
+      <button class="contact-form__btn" id="sendBtn" type="submit">
+        send
+      </button>
 
       <!-- <input type="submit" value="Send" /> -->
     </form>
