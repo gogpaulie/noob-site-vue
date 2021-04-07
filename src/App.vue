@@ -37,6 +37,7 @@ export default {
     Contact,
     Footer,
   },
+
   methods: {
     showNav() {
       this.showNavBar = !this.showNavBar;

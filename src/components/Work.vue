@@ -33,8 +33,8 @@
             @playing="playing"
             :fit-parent="true"
             :resize="true"
+            :player-vars="playerVars"
           ></youtube>
-          <!-- <video src="https://www.youtube.com/watch?v=5tQ5KRpWKHQ"></video> -->
         </div>
       </div>
       <div class="flex">
@@ -67,9 +67,11 @@
           <youtube
             :video-id="videoId"
             ref="youtube"
+            :player-vars="playerVars"
             @playing="playing"
-            :fit-parent="true"
+            :fitParent="true"
             :resize="true"
+            :resizeDelay="0"
           ></youtube>
         </div>
       </div>
@@ -83,6 +85,13 @@ export default {
   data() {
     return {
       videoId: '5tQ5KRpWKHQ',
+      playerVars: {
+        showinfo: 0,
+        autohide: 1,
+        modestbranding: 1,
+        controls: 1,
+        rel: 0,
+      },
     };
   },
   methods: {

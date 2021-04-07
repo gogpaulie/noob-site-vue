@@ -15,6 +15,7 @@
           @blur="hideLabel"
           @focus="showLabel"
           placeholder="Enter name..."
+          required
         />
       </div>
       <div class="contact-form__group">
@@ -26,6 +27,7 @@
           @blur="hideLabel"
           @focus="showLabel"
           placeholder="Enter email..."
+          required
         />
       </div>
       <div class="contact-form__group">
@@ -38,11 +40,15 @@
           placeholder="Enter Message..."
           @blur="hideLabel"
           @focus="showLabel"
+          required
         ></textarea>
       </div>
-      <button class="contact-form__btn" id="sendBtn" type="submit">
-        send
-      </button>
+      <vue-recaptcha sitekey="6LfSSKAaAAAAAF4LpLONWZYzyP-UE-1NreDz7iW2">
+        <button class="contact-form__btn" id="sendBtn" type="submit">
+          send
+        </button>
+      </vue-recaptcha>
+
       <!-- <input type="submit" value="Send" /> -->
     </form>
   </div>
@@ -50,16 +56,17 @@
 
 <script>
 import emailjs from 'emailjs-com';
-
+import VueRecaptcha from 'vue-recaptcha';
 export default {
+  components: { VueRecaptcha },
   methods: {
     sendEmail: (e) => {
       emailjs
         .sendForm(
-          'YOUR_SERVICE_ID',
-          'YOUR_TEMPLATE_ID',
+          'service_tev9jzv',
+          'template_4kl84vq',
           e.target,
-          'YOUR_USER_ID'
+          'user_BaAAqPGltN6DwLfEHQAP1'
         )
         .then(
           (result) => {

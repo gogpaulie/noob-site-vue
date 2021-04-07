@@ -11,7 +11,9 @@
     "core-js": "^3.6.5",
     "emailjs-com": "^2.6.4",
     "vue": "^2.6.11",
-    "vue-youtube": "^1.4.0"
+    "vue-recaptcha": "^1.3.0",
+    "vue-youtube": "^1.4.0",
+    "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
