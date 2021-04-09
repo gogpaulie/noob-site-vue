@@ -126,9 +126,10 @@ export default {
   }
 }
 .nav.active {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(115, 143, 161, 0.7);
   max-width: 100%;
   max-width: 100%;
+  box-shadow: 0 5px 10px 2px rgba($color: #000000, $alpha: 0.2);
 
   @media (max-width: $ig-small-screen) {
     padding: 0;
@@ -140,13 +141,13 @@ export default {
 }
 
 .nav.active a {
-  color: black;
+  color: white;
   &:hover {
-    border-color: black;
+    border-color: white;
   }
 }
 
 .nav.active .nav__mobile-icon {
-  color: #333;
+  color: white;
 }
 </style>
