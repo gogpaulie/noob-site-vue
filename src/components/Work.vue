@@ -1,7 +1,7 @@
 <template>
   <section class="work">
     <div class="container">
-      <h2 class="section-title">MY SERVICES</h2>
+      <h2 class="section-title">My Services</h2>
       <div class="flex">
         <div class="divider-title"></div>
         <h3 class="service-title">Video Production</h3>

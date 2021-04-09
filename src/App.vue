@@ -49,6 +49,12 @@ export default {
 
 <style lang="scss">
 @import './styles/_variables.scss';
+@font-face {
+  font-family: 'November';
+  /* font-style: normal;
+  font-weight: normal; */
+  src: local('November'), url('November-Regular.ttf') format('truetype');
+}
 *,
 *::after,
 *::before {
@@ -107,9 +113,12 @@ body {
 
 .section-title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 500;
   margin-bottom: 9rem;
-  text-decoration: underline;
+  font-family: $font-display;
+  letter-spacing: 5px;
   @media (max-width: $ig-small-screen) {
     margin-bottom: 5rem;
     font-size: 3rem;

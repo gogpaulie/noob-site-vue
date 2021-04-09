@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <h2 class="section-title">CONTACT ME</h2>
+    <h2 class="section-title">Contact Me</h2>
     <p class="form-container__subtitle">
       Do you want to collaborate? Message me below and I'll get back to you
       ASAP!
@@ -81,7 +81,7 @@ export default {
             Vue.notify({
               type: 'success',
               title: 'Message Sent!',
-              text: 'Talk to you soon!',
+              text: 'Talk to you soon! 😃',
             });
             e.target.reset();
           },

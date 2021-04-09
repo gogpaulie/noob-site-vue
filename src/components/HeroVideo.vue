@@ -2,11 +2,11 @@
   <section class="hero-video">
     <div class="bg-video">
       <video class="bg-video__content" autoPlay muted loop>
-        <source src="../assets/HeroVideo.mp4" type="video/mp4" />
+        <source src="../assets/HeroVideo2.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="hero-video__title container">
-      <h1>Perpetual Noob</h1>
+      <h1 class="section-title">Perpetual Noob</h1>
       <p>
         Video Producer, Voice Actor, Live Broadcaster, Guide Creator
       </p>

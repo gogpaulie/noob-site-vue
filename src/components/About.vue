@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="container">
-      <h2 class="section-title">ABOUT ME</h2>
+      <h2 class="section-title">About Me</h2>
       <div class="flex-container">
         <div class="flex-container__left">
           <img src="../assets/about.png" alt="about me" />
@@ -15,6 +15,10 @@
             voices into my broadcasts. Nowadays I make guides for video game
             boss fights, broadcast on Twitch, create video content for others
             like you, and voice act.
+          </p>
+          <p>
+            My dogs Vash and Peggy also make sure to help me as much as they can
+            with my work. They will sometimes visit when I’m streaming.
           </p>
           <p>
             Since I started creating video-based content, I've been learning
@@ -98,6 +102,7 @@ export default {
     & p {
       font-size: 2.2rem;
       line-height: 150%;
+      font-weight: 300;
       margin-bottom: 3rem;
       @media (max-width: $ig-small-screen) {
         font-size: 1.75rem;
