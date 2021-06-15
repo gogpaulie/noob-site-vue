@@ -64,7 +64,7 @@
       </div>
       <div class="work__card">
         <div class="work__card--video">
-          <youtube
+          <!-- <youtube
             :video-id="videoId"
             ref="youtube"
             :player-vars="playerVars"
@@ -72,7 +72,12 @@
             :fitParent="true"
             :resize="true"
             :resizeDelay="0"
-          ></youtube>
+          ></youtube> -->
+          <img
+            class="work__card--placeholder"
+            src="../assets/placeholder-vo.png"
+            alt="Voice acting placeholder"
+          />
         </div>
       </div>
     </div>
@@ -218,6 +223,11 @@ export default {
           width: 300px;
         } */
       }
+    }
+
+    &--placeholder {
+      width: 100%;
+      height: 100%;
     }
 
     &--info {
