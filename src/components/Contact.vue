@@ -2,8 +2,7 @@
   <div class="form-container">
     <h2 class="section-title">Contact Me</h2>
     <p class="form-container__subtitle">
-      Do you want to collaborate? Message me below and I'll get back to you
-      ASAP!
+      Do you want to hire me? Message me below and I'll get back to you ASAP!
     </p>
     <form class="contact-form" @submit.prevent="sendEmail">
       <div class="contact-form__group">

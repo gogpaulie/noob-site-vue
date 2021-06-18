@@ -4,7 +4,7 @@
       <h2 class="section-title">My Services</h2>
       <div class="flex">
         <div class="divider-title"></div>
-        <h3 class="service-title">Video Production</h3>
+        <h3 class="service-title">Video Editing</h3>
         <div class="divider-title"></div>
       </div>
 
@@ -89,7 +89,7 @@ export default {
   name: 'Work',
   data() {
     return {
-      videoId: '5tQ5KRpWKHQ',
+      videoId: 'rg08fB-WXhI',
       playerVars: {
         showinfo: 0,
         autohide: 1,

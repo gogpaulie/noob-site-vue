@@ -8,7 +8,7 @@
     <div class="hero-video__title container">
       <h1 class="section-title">Perpetual Noob</h1>
       <p>
-        Video Producer, Voice Actor, Live Broadcaster, Guide Creator
+        Video Editor, Voice Actor, Live Broadcaster, Guide Creator
       </p>
     </div>
     <div class="hero-video__cta">
